@@ -1,0 +1,12 @@
+diff -dur -x '*~' linuxsampler-2.1.0.orig/src/Makefile.am linuxsampler-2.1.0/src/Makefile.am
+--- linuxsampler-2.1.0.orig/src/Makefile.am	2016-04-22 17:37:45.000000000 +0200
++++ linuxsampler-2.1.0/src/Makefile.am	2018-02-04 15:24:29.868548443 +0100
+@@ -38,7 +38,7 @@
+ liblinuxsamplerincludedir = $(includedir)/linuxsampler
+ liblinuxsamplerinclude_HEADERS = Sampler.h EventListeners.h
+ 
+-pkglib_LTLIBRARIES = liblinuxsampler.la
++lib_LTLIBRARIES = liblinuxsampler.la
+ liblinuxsampler_la_SOURCES = Sampler.cpp
+ liblinuxsampler_la_LIBADD = \
+ 	$(sqlite3_lib) \

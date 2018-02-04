@@ -1,0 +1,23 @@
+diff -dur linuxsampler-2.1.0.orig/configure.ac linuxsampler-2.1.0/configure.ac
+--- linuxsampler-2.1.0.orig/configure.ac	2017-11-25 18:29:29.000000000 +0100
++++ linuxsampler-2.1.0/configure.ac	2018-02-04 14:39:42.418347313 +0100
+@@ -1327,6 +1327,7 @@
+ fi
+ AC_DEFINE_UNQUOTED(CONFIG_UNSIGNED_TRIANG_ALGO, ${triang_unsigned}, [Define unsigned triangular wave algorithm to be used.])
+ 
++AC_DEFINE_UNQUOTED(CONFIG_LADSPA_DIR, "${libdir}/ladspa", [Default LADSPA plugins directory])
+ 
+ ###########################################################################
+ # Create Build Files
+diff -dur linuxsampler-2.1.0.orig/src/effects/LadspaEffect.cpp linuxsampler-2.1.0/src/effects/LadspaEffect.cpp
+--- linuxsampler-2.1.0.orig/src/effects/LadspaEffect.cpp	2016-12-15 13:47:45.000000000 +0100
++++ linuxsampler-2.1.0/src/effects/LadspaEffect.cpp	2018-02-04 14:39:50.585407035 +0100
+@@ -358,7 +358,7 @@
+     };
+     #else
+     const String searchDirs[] = {
+-        "/usr/lib/ladspa",
++        CONFIG_LADSPA_DIR,
+         "/usr/local/lib/ladspa"
+     };
+     #endif

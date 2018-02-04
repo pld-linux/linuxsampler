@@ -5,7 +5,7 @@
 Summary:	LinuxSampler - free, streaming capable open source pure software audio sampler
 Name:		linuxsampler
 Version:	2.1.0
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://download.linuxsampler.org/packages/%{name}-%{version}.tar.bz2

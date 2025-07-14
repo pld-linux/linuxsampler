@@ -102,8 +102,8 @@ Statyczna biblioteka %{name}.
 %prep
 %setup -q
 
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 sed -i -e's@/usr/lib/ladspa@%{_libdir}/ladspa@' ./Documentation/lscp.xml
 
